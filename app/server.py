@@ -7,7 +7,7 @@ from io import BytesIO
 from fastai.vision import *
 import base64
 
-model_file_url = 'https://github.com/simongrest/'
+model_file_url = 'https://github.com/simongrest/fastai-vision-app/blob/master/app/models/model.pkl'
 model_file_name = 'model'
 
 path = Path(__file__).parent
