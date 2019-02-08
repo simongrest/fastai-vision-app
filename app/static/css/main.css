@@ -164,10 +164,10 @@ iframe {
   align-items: center;
   padding: 15px;
   background: #a64bf4;
-  background: -webkit-linear-gradient(45deg, #00dbde, #fc00ff);
-  background: -o-linear-gradient(45deg, #00dbde, #fc00ff);
-  background: -moz-linear-gradient(45deg, #00dbde, #fc00ff);
-  background: linear-gradient(45deg, #00dbde, #fc00ff);
+  background: -webkit-linear-gradient(45deg, #89bbff, #3c00ff);
+  background: -o-linear-gradient(45deg, #89bbff, #3c00ff);
+  background: -moz-linear-gradient(45deg, #89bbff, #3c00ff);
+  background: linear-gradient(45deg, #89bbff, #3c00ff);
   
 }
 
@@ -329,10 +329,10 @@ textarea.input100 {
   width: 300%;
   height: 100%;
   background: #a64bf4;
-  background: -webkit-linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: -o-linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: -moz-linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: linear-gradient(left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+  background: -webkit-linear-gradient(left, #89bbff, #3c00ff);
+  background: -o-linear-gradient(left, #89bbff, #3c00ff);
+  background: -moz-linear-gradient(left, #89bbff, #3c00ff);
+  background: linear-gradient(left, #89bbff, #3c00ff);
   top: 0;
   left: -100%;
 
@@ -565,10 +565,10 @@ textarea.input100 {
 
 .select2-container .select2-results__option--highlighted[aria-selected] {
   background: #a64bf4;
-  background: -webkit-linear-gradient(right, #00dbde, #fc00ff);
-  background: -o-linear-gradient(right, #00dbde, #fc00ff);
-  background: -moz-linear-gradient(right, #00dbde, #fc00ff);
-  background: linear-gradient(right, #00dbde, #fc00ff);
+  background: -webkit-linear-gradient(right, #89bbff, #3c00ff);
+  background: -o-linear-gradient(right, #89bbff, #3c00ff);
+  background: -moz-linear-gradient(right, #89bbff, #3c00ff);
+  background: linear-gradient(right, #89bbff, #3c00ff);
   color: white;
 }
 

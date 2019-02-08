@@ -38,18 +38,25 @@ PREDICTION_FILE_SRC = path/'static'/'predictions.txt'
 @app.route("/upload", methods=["POST"])
 async def upload(request):
     data = await request.form()
-    img_bytes = await (data["img"].read())
+    img_bytes = data['img']
     bytes = base64.b64decode(img_bytes)
     return predict_from_bytes(bytes)
 
 def predict_from_bytes(bytes):
     img = open_image(BytesIO(bytes))
-    _,_,losses = learn.predict(img)
-    predictions = sorted(zip(classes, map(float, losses)), key=lambda p: p[1], reverse=True)
+    predictions = learn.predict(img)
     result_html1 = path/'static'/'result1.html'
     result_html2 = path/'static'/'result2.html'
     
-    result_html = str(result_html1.open().read() +str(predictions[0:3]) + result_html2.open().read())
+    if str(predictions[0]) == 'POSITIVES':
+        pred = 'The test was read as <b>Positive</b> with a '
+    elif str(predictions[0]) == 'NEGATIVES':
+        pred = 'The test was read as <b>Negative</b> with a '
+    else:
+        pred = 'The test was read as <b>Invalid</b> with a '
+        
+        
+    result_html = str(result_html1.open().read() + pred + str(round(float(predictions[2].max())*100,2)) +'%  probability' + result_html2.open().read())
     return HTMLResponse(result_html)
 
 @app.route("/")
@@ -58,4 +65,5 @@ def form(request):
     return HTMLResponse(index_html.open().read())
 
 if __name__ == "__main__":
+    #print('in main')
     if "serve" in sys.argv: uvicorn.run(app, host="0.0.0.0", port=8080)
